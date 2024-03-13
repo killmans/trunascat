@@ -90,8 +90,7 @@ config:
     verbosity: error
     jwt_secret_key: '00'
     CORS_origins: [ "*" ]
-    username: '11'
-    password: '22'
+
   telegram:
     enabled: false
     token: '33'
@@ -126,5 +125,6 @@ bot:
 
 appConf:
   strategy_name: "SampleStrategy"
-
+    username: "11"
+    password: "22"
 strategies: { }
