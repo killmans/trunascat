@@ -42,7 +42,7 @@ questions:
             hidden: false
             editable: true
             required: true
-        - variable: FREQTRADE__API_SERVER_USERNAME
+        - variable: username
           label: "Username for UI"
           schema:
             defalult: "admin"
@@ -50,7 +50,7 @@ questions:
             hidden: false
             editable: true
             required: true
-        - variable: FREQTRADE__API_SERVER_PASSWORD
+        - variable: password
           label: "Password for UI"
           schema:
             defalult: "password"
