@@ -84,6 +84,8 @@ config:
     max_trade_duration_minute: 1440
     remove_pumps: false
   api_server:
+    username: '11'
+    password: '22' 
     enabled: true
     listen_ip_address: 0.0.0.0
     listen_port: 8080
@@ -125,9 +127,8 @@ bot:
 
 appConf:
   strategy_name: "SampleStrategy"
-api_server:
-  username: '11'
-  password: '22' 
+
+
 strategies: { }
 
 
