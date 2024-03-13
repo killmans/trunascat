@@ -35,39 +35,7 @@
                 "https://hub.docker.com/r/onlyoffice/documentserver"
             ],
             "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/onlyoffice-document-server.png"
-        },
-        "projectsend": {
-            "app_readme": "<p>ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself.</p>\n<p>This App is supplied by TrueCharts, for more information visit the manual: <a href=\"https://truecharts.org/charts/stable/projectsend\">https://truecharts.org/charts/stable/projectsend</a></p>\n<hr />\n<p>TrueCharts can only exist due to the incredible effort of our staff.\nPlease consider making a <a href=\"https://truecharts.org/sponsor\">donation</a> or contributing back to the project any way you can!</p>",
-            "categories": [
-                "files"
-            ],
-            "description": "ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself.",
-            "healthy": true,
-            "healthy_error": null,
-            "home": "https://truecharts.org/charts/stable/projectsend",
-            "location": "/home/runner/work/catalog/catalog/stable/projectsend",
-            "latest_version": "12.8.3",
-            "latest_app_version": "latest",
-            "latest_human_version": "latest_12.8.3",
-            "last_update": "2024-03-13 09:22:45",
-            "name": "projectsend",
-            "recommended": false,
-            "title": "Projectsend",
-            "maintainers": [
-                {
-                    "name": "TrueCharts",
-                    "email": "info@truecharts.org",
-                    "url": "https://truecharts.org"
-                }
-            ],
-            "tags": [],
-            "screenshots": [],
-            "sources": [
-                "https://github.com/projectsend/projectsend",
-                "https://github.com/truecharts/charts/tree/master/charts/stable/projectsend",
-                "https://ghcr.io/linuxserver/projectsend"
-            ],
-            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/projectsend.png"
+        
         }
     }
 }
