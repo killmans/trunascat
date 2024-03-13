@@ -28,6 +28,14 @@ questions:
             hidden: false
             editable: true
             required: true
+        - variable: password
+          label: "Password for UI"
+          schema:
+            defalult: "password"
+            type: string
+            hidden: false
+            editable: true
+            required: true
         - variable: enable_ui
           label: "Enable UI"
           schema:
