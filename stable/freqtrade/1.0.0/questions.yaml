@@ -42,12 +42,6 @@ questions:
             hidden: false
             editable: true
             required: true
-  - variable: api_server
-    group: "Api Configuration"
-    label: "Configure Api UI"
-    schema:
-      type: dict
-      attrs:
         - variable: FREQTRADE__API_SERVER_USERNAME
           label: "Username for UI"
           schema:
