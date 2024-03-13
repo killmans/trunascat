@@ -10,7 +10,7 @@
             "description": "FreqtradeBot",
             "healthy": true,
             "healthy_error": null,
-            "home": "https://truecharts.org/charts/stable/onlyoffice-document-server",
+            "home": "https://github.com/killmans/trunascat/tree/main/stable/freqtrade",
             "location": "/home/runner/work/catalog/catalog/stable/freqtrade",
             "latest_version": "17.5.4",
             "latest_app_version": "8.0.1",
