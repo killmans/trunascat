@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freqtrade
+spec:
+  selector:
+    matchLabels:
+      app: freqtrade
+  template:
+    metadata:
+      labels:
+        app: freqtrade
+    spec:
+      initContainers:
+        - name: volume-mount-hack
+          image: busybox
+          command: [ "/bin/sh", "-c", "chown -R 1000:1000 /sqlite" ]
+          volumeMounts:
+            - name: sqlite
+              mountPath: /sqlite
+      containers:
+        - name: freqtrade
+          image: {{ .Values.image.base }}:{{ .Values.image.tag }}
+          command: [ "/bin/sh", "-c" ]
+          env:
+            {{ if (.Values.environmentVariables)}}
+            {{- range $envVariable := .Values.environmentVariables }}
+            {{- if and $envVariable.name $envVariable.value }}
+            - name: {{ $envVariable.name }}
+              value: {{ $envVariable.value | quote }}
+            {{- else }}
+              {{- fail "Please specify name/value for environment variable" }}
+            {{- end }}
+            {{- end}}
+            {{- end}}
+          args:
+            - chown -R 1000:1000 /sqlite;
+              freqtrade trade --config /freqtrade/config/config.json --strategy {{ .Values.appConf.strategy_name }} --db-url sqlite:////sqlite/tradesv3.sqlite;
+          volumeMounts:
+            - mountPath: /freqtrade/config
+              name: config
+            - mountPath: /freqtrade/user_data/strategies
+              name: strategies
+            - mountPath: /sqlite
+              name: sqlite
+          ports:
+            - name: api
+              containerPort: 8080
+      volumes:
+        - name: config
+          configMap:
+            name: freqtrade-config
+        - name: strategies
+          configMap:
+            name: freqtrade-strategies
+        - name: sqlite
+          persistentVolumeClaim:
+            claimName: freqtrade-sqlite
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: freqtrade-sqlite
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.bot.pvc_size }}

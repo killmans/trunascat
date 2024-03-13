@@ -1,0 +1,63 @@
+groups:
+  - name: "App Configuration"
+    description: "Configure Application"
+  - name: "Network Configuration"
+    description: "Configure Network"
+  - name: "Environment Variables"
+    description: "Configure Environment Variables"
+questions:
+  - variable: appConf
+    group: "App Configuration"
+    label: "Configure Application"
+    schema:
+      type: dict
+      attrs:
+        - variable: strategy_name
+          label: "Strategy"
+          schema:
+            default: "Matoa"
+            type: string
+            hidden: false
+            editable: true
+            required: true
+        - variable: enable_ui
+          label: "Enable UI"
+          schema:
+            type: boolean
+            default: true
+            hidden: false
+            editable: true
+  - variable: network
+    group: "Network Configuration"
+    label: "Configure Network"
+    schema:
+      type: dict
+      attrs:
+        - variable: port
+          label: "Port"
+          schema:
+            default: 8080
+            type: int
+            hidden: false
+            editable: true
+            required: true
+  - variable: environmentVariables
+    label: "Image environment"
+    group: "Environment Variables"
+    schema:
+      type: list
+      default: [ ]
+      items:
+        - variable: environmentVariable
+          label: "Environment Variable"
+          schema:
+            type: dict
+            attrs:
+              - variable: name
+                label: "Name"
+                schema:
+                  type: string
+              - variable: value
+                label: "Value"
+                schema:
+                  type: string

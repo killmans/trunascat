@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: freqtrade-config
+data:
+  config.json: |
+{{ toPrettyJson .Values.config | indent 4 }}

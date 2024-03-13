@@ -1,0 +1,24 @@
+apiVersion: v2
+kubeVersion: ">=1.16.0-0"
+name: freqtrade
+version: 1.0.0
+upstream_version: 7.0.1
+appVersion: "auto"
+description: Free, open source crypto trading bot.
+type: application
+deprecated: false
+home: https://github.com/Oddwerth/freqtrade
+icon: https://www.freqtrade.io/en/stable/images/logo.png
+keywords:
+  - freqtrade
+  - trading
+  - cryptos
+sources:
+  - https://github.com/Oddwerth/freqtrade
+  - https://github.com/freqtrade/freqtrade
+  - https://hub.docker.com/r/freqtradeorg/freqtrade/
+maintainers:
+  - name: Oddwerth
+    email: hello@lucasmichalet.fr
+    url: lucasmichalet.fr
+# annotations:

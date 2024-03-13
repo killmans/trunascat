@@ -1,0 +1,130 @@
+image:
+  base: freqtradeorg/freqtrade
+  tag: latest
+
+config:
+  max_open_trades: 4
+  stake_currency: "BUSD"
+  stake_amount: "unlimited"
+  amend_last_stake_amount: true
+  #tradable_balance_ratio: 0.99
+  available_capital: 70
+  fiat_display_currency: "USD"
+  dry_run: true
+  dry_run_wallet: 70
+  cancel_open_orders_on_exit: false
+  bot_name: "FTBot"
+  initial_state: "running"
+  force_entry_enable: false
+  internals:
+    process_throttle_secs: 2
+  ignore_buying_expired_candle_after: 90
+  trading_mode: "spot"
+  unfilledtimeout:
+    entry: 5
+    exit: 10
+    unit: "minutes"
+  order_types:
+    entry: "market"
+    exit: "market"
+    force_exit: "market"
+    emergency_exit: "market"
+    trailing_stop_loss: "market"
+    stoploss: "market"
+    stoploss_on_exchange: false
+    stoploss_on_exchange_interval: 60
+  entry_pricing:
+    price_side: "other"
+    use_order_book: false
+    order_book_top: 1
+    price_last_balance: 0.0
+    check_depth_of_market:
+      enabled: false
+      bids_to_ask_delta: 1
+  exit_pricing:
+    price_side: "other"
+    use_order_book: false
+    order_book_top: 1
+  exchange:
+    ccxt_config:
+      enableRateLimit: true
+    ccxt_async_config:
+        enableRateLimit: true
+        rateLimit: 50
+    name: "binance"
+    key: '1'
+    secret: '2'
+    pair_whitelist: [ ]
+    pair_blacklist:
+      - "(BNB|KCS)/.*"
+      - ".*(_PREMIUM|BEAR|BULL|DOWN|HALF|HEDGE|UP|[1235][SL]|2021)/.*"
+      - ".*USDT_.*"
+      - "(ANC|LUNA|LUNC|USTC)/.*"
+      - "(PEOPLE)/.*"
+      - "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD|TRY|UAH|USD|ZAR)/.*"
+      - "(BUSD|CUSD|CUSDT|DAI|PAX|PAXG|SUSD|TUSD|USDC|USDN|USDP|USDT|UST|VAI|USDD|USDJ)/.*"
+      - "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CITY|FOR|GAL|GOZ|IBFK|JUV|LAZIO|LEG|LOCK-1|NAVI|NMR|NOV|OG|PFL|PORTO|PSG|ROUSH|SANTOS|STV|TH|TRA|UCH|UFC|YBO)/.*"
+  pairlists:
+    - method: "VolumePairList"
+      number_assets: 100
+      sort_key: "quoteVolume"
+    - method: "AgeFilter"
+      min_days_listed: 30
+  edge:
+    enabled: false
+    process_throttle_secs: 1800
+    calculate_since_number_of_days: 14
+    allowed_risk: 0.01
+    stoploss_range_min: -0.01
+    stoploss_range_max: -0.1
+    stoploss_range_step: -0.01
+    minimum_winrate: 0.50
+    minimum_expectancy: 0.05
+    min_trade_number: 2
+    max_trade_duration_minute: 1440
+    remove_pumps: false
+  api_server:
+    enabled: true
+    listen_ip_address: 0.0.0.0
+    listen_port: 8080
+    verbosity: error
+    jwt_secret_key: '00'
+    CORS_origins: [ "*" ]
+    username: '11'
+    password: '22'
+  telegram:
+    enabled: false
+    token: '33'
+    chat_id: '44'
+    keyboard:
+      - [ "/start", "/stop", "/status" ]
+      - [ "/profit", "/balance", "/performance" ]
+      - [ "/count", "/daily", "/help" ]
+      - [ "/forcesell", "/performance", "/daily" ]
+      - [ "/reload_config", "/stopbuy", "/whitelist" ]
+      - [ "/blacklist", "/edge", "/logs" ]
+      - [ "/version", "/health" ]
+    notification_settings:
+      status: "silent"
+      warning: "on"
+      startup: "silent"
+      entry: "off"
+      exit: "off"
+      entry_cancel: "off"
+      exit_cancel: "off"
+      entry_fill: "silent"
+      exit_fill: "silent"
+      protection_trigger: "silent"
+      protection_trigger_global: "silent"
+      strategy_msg: "silent"
+      show_candle: "off"
+    reload: true
+    balance_dust_level: 0.01
+
+bot:
+  pvc_size: 1Gi
+
+appConf:
+  strategy_name: "SampleStrategy"
+
+strategies: { }

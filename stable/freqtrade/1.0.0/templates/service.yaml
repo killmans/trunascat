@@ -1,0 +1,17 @@
+{{- if (.Values.appConf.enable_ui) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: freqtrade
+  labels:
+    app: freqtrade
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: {{ .Values.network.port }}
+    targetPort: api
+  selector:
+    app: freqtrade
+{{- end }}
