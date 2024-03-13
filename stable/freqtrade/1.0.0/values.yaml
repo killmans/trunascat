@@ -85,8 +85,6 @@ config:
     remove_pumps: false
   api_server:
     enabled: true
-    username: '11'
-    password: '22'
     listen_ip_address: 0.0.0.0
     listen_port: 8080
     verbosity: error
@@ -128,7 +126,9 @@ bot:
 appConf:
   strategy_name: "SampleStrategy"
 
-
+api_server:
+    username: '11'
+    password: '22'
 strategies: { }
 
 
