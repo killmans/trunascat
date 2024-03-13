@@ -20,6 +20,14 @@ questions:
             hidden: false
             editable: true
             required: true
+       - variable: username
+          label: "Username for UI"
+          schema:
+            default: ""
+            type: string
+            hidden: false
+            editable: true
+            required: true
         - variable: enable_ui
           label: "Enable UI"
           schema:
@@ -27,22 +35,6 @@ questions:
             default: true
             hidden: false
             editable: true
-      - variable: username
-        label: "Username for UI:"
-        schema:
-            default: "admin"
-            type: string
-            hidden: false
-            editable: true
-            required: true
-      - variable: password
-      label: "Password:"
-      schema:
-            default: "admin"
-            type: string
-            hidden: false
-            editable: true
-            required: true
   - variable: network
     group: "Network Configuration"
     label: "Configure Network"
