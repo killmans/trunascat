@@ -20,10 +20,10 @@ questions:
             hidden: false
             editable: true
             required: true
-       - variable: username
+        - variable: username
           label: "Username for UI"
           schema:
-            default: ""
+            defalult: "admin"
             type: string
             hidden: false
             editable: true
@@ -44,7 +44,7 @@ questions:
         - variable: port
           label: "Port"
           schema:
-            default: 100000
+            default: 8080
             type: int
             hidden: false
             editable: true
