@@ -20,7 +20,46 @@ questions:
             hidden: false
             editable: true
             required: true
-
+        - variable: username
+          label: "Username for UI"
+          schema:
+            default: "admin"
+            type: string
+            hidden: false
+            editable: true
+            required: true
+        - variable: password
+          label: "Password for UI"
+          schema:
+            default: "password"
+            type: string
+            hidden: false
+            editable: true
+            required: true
+        - variable: api_exchange_key
+          label: "Api key for exchange service"
+          schema:
+            default: ""
+            type: string
+            hidden: false
+            editable: true
+            required: false
+        - variable: api_exchange_secret
+          label: "Api secret for exchange service"
+          schema:
+            default: ""
+            type: string
+            hidden: false
+            editable: true
+            required: false
+        - variable: dry_run
+          label: "Enable dry run mode"
+          schema:
+            type: boolean
+            default: true
+            hidden: false
+            editable: true
+            
         - variable: enable_ui
           label: "Enable UI"
           schema:
@@ -39,22 +78,6 @@ questions:
           schema:
             default: 8080
             type: int
-            hidden: false
-            editable: true
-            required: true
-        - variable: username
-          label: "Username for UI"
-          schema:
-            defalult: "admin"
-            type: string
-            hidden: false
-            editable: true
-            required: true
-        - variable: password
-          label: "Password for UI"
-          schema:
-            defalult: "password"
-            type: string
             hidden: false
             editable: true
             required: true
