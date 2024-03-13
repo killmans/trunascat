@@ -20,22 +20,7 @@ questions:
             hidden: false
             editable: true
             required: true
-        - variable: FREQTRADE__API_SERVER_USERNAME=
-          label: "Username for UI"
-          schema:
-            defalult: "admin"
-            type: string
-            hidden: false
-            editable: true
-            required: true
-        - variable: FREQTRADE__API_SERVER_PASSWORD=
-          label: "Password for UI"
-          schema:
-            defalult: "password"
-            type: string
-            hidden: false
-            editable: true
-            required: true
+
         - variable: enable_ui
           label: "Enable UI"
           schema:
@@ -54,6 +39,28 @@ questions:
           schema:
             default: 8080
             type: int
+            hidden: false
+            editable: true
+            required: true
+  - variable: api_server
+    group: "Api Configuration"
+    label: "Configure Api UI"
+    schema:
+      type: dict
+      attrs:
+        - variable: FREQTRADE__API_SERVER_USERNAME
+          label: "Username for UI"
+          schema:
+            defalult: "admin"
+            type: string
+            hidden: false
+            editable: true
+            required: true
+        - variable: FREQTRADE__API_SERVER_PASSWORD
+          label: "Password for UI"
+          schema:
+            defalult: "password"
+            type: string
             hidden: false
             editable: true
             required: true
