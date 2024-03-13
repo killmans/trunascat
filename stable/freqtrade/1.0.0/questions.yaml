@@ -28,7 +28,7 @@ questions:
             hidden: false
             editable: true
             required: true
-        - variable: password
+        - variable: FREQTRADE__API_SERVER_PASSWORD
           label: "Password for UI"
           schema:
             defalult: "password"
