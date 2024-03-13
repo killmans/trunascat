@@ -245,7 +245,7 @@
                                                                                             "description": "A Django variable acting as a salt for most things that require security.",
                                                                                             "schema": {
                                                                                                 "type": "string",
-                                                                                                "required": true,
+                                                                                                "required": false,
                                                                                                 "default": ""
                                                                                             }
                                                                                         },
