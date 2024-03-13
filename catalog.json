@@ -2,23 +2,23 @@
     "charts": {},
     "test": {},
     "stable": {
-        "onlyoffice-document-server": {
-            "app_readme": "<p>ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.</p>\n<p>This App is supplied by TrueCharts, for more information visit the manual: <a href=\"https://truecharts.org/charts/stable/onlyoffice-document-server\">https://truecharts.org/charts/stable/onlyoffice-document-server</a></p>\n<hr />\n<p>TrueCharts can only exist due to the incredible effort of our staff.\nPlease consider making a <a href=\"https://truecharts.org/sponsor\">donation</a> or contributing back to the project any way you can!</p>",
+        "freqtrade": {
+            "app_readme": "<p>FreqtradeBot</p>",
             "categories": [
                 "office"
             ],
-            "description": "ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.",
+            "description": "FreqtradeBot",
             "healthy": true,
             "healthy_error": null,
             "home": "https://truecharts.org/charts/stable/onlyoffice-document-server",
-            "location": "/home/runner/work/catalog/catalog/stable/onlyoffice-document-server",
+            "location": "/home/runner/work/catalog/catalog/stable/freqtrade",
             "latest_version": "17.5.4",
             "latest_app_version": "8.0.1",
             "latest_human_version": "8.0.1_17.5.4",
             "last_update": "2024-03-13 09:22:45",
-            "name": "onlyoffice-document-server",
+            "name": "freqtradebot",
             "recommended": false,
-            "title": "Onlyoffice-document-server",
+            "title": "Freqtrade",
             "maintainers": [
                 {
                     "name": "TrueCharts",
@@ -29,12 +29,10 @@
             "tags": [],
             "screenshots": [],
             "sources": [
-                "https://github.com/ONLYOFFICE/Docker-DocumentServer",
-                "https://github.com/ONLYOFFICE/DocumentServer",
-                "https://github.com/truecharts/charts/tree/master/charts/stable/onlyoffice-document-server",
-                "https://hub.docker.com/r/onlyoffice/documentserver"
+                "https://github.com/killmans/trunascat/tree/main/stable/freqtrade",
+                "https://github.com/freqtrade/freqtrade"
             ],
-            "icon_url": "https://truecharts.org/img/hotlink-ok/chart-icons/onlyoffice-document-server.png"
+            "icon_url": "https://www.freqtrade.io/en/stable/images/logo.png"
         
         }
     }
