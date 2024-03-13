@@ -27,6 +27,22 @@ questions:
             default: true
             hidden: false
             editable: true
+      - variable: username
+        label: "Username for UI:"
+        schema:
+            default: "admin"
+            type: string
+            hidden: false
+            editable: true
+            required: true
+      - variable: password
+      label: "Password:"
+      schema:
+            default: "admin"
+            type: string
+            hidden: false
+            editable: true
+            required: true
   - variable: network
     group: "Network Configuration"
     label: "Configure Network"
@@ -36,7 +52,7 @@ questions:
         - variable: port
           label: "Port"
           schema:
-            default: 8080
+            default: 100000
             type: int
             hidden: false
             editable: true
