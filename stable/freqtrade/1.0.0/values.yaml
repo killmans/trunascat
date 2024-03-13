@@ -125,6 +125,7 @@ bot:
 
 appConf:
   strategy_name: "SampleStrategy"
+api_server:
   username: '11'
   password: '22' 
 strategies: { }
