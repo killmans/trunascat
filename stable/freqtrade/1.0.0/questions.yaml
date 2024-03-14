@@ -59,7 +59,14 @@ questions:
             default: true
             hidden: false
             editable: true
-            
+        - variable: max_open_trades
+          label: "Max open trades"
+          schema:
+            default: ""
+            type: int
+            hidden: false
+            editable: true
+            required: false
         - variable: enable_ui
           label: "Enable UI"
           schema:
