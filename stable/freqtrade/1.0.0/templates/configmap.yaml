@@ -3,8 +3,5 @@ kind: ConfigMap
 metadata:
   name: freqtrade-config
 data:
-  config.json: 
-   api_server:
-      username: aaa
-      password: bbb
+  config.json: |
 {{ toPrettyJson .Values.config | indent 4 }}
