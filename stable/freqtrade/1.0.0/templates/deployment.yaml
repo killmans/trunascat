@@ -35,7 +35,7 @@ spec:
             {{- end}}
           args:
             - chown -R 1000:1000 /sqlite;
-              freqtrade trade --config /freqtrade/config/config.json --strategy {{ .Values.appConf.strategy_name }} --username {{ .Values.appConf.username }} --db-url sqlite:////sqlite/tradesv3.sqlite;
+              freqtrade trade --config /freqtrade/config/config.json --strategy {{ .Values.appConf.strategy_name }} --api_server.username {{ .Values.appConf.username }} --db-url sqlite:////sqlite/tradesv3.sqlite;
           volumeMounts:
             - mountPath: /freqtrade/config
               name: config
