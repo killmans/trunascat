@@ -20,7 +20,7 @@ questions:
             hidden: false
             editable: true
             required: true
-        - variable: api_server.username
+        - variable: username
           label: "Username for UI"
           schema:
             default: "admin"
