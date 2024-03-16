@@ -54,8 +54,70 @@ config:
     name: "binance"
     key: '1'
     secret: '2'
-    pair_whitelist:  
-     - "(PEPE|VANRY|SOL|FLOKI|AVAX|NEAR|SEI|BCH/USDT|INJ|ATOM|GALA|RNDR|AGIX|AMP|DYDX|AI|ETC|ENS|XAI|ACA|SAND|SUSHI|VET|BURGER|KDA|STRAX|RDNT|COMP|FTT|TRB|GLMR|OCEAN|LOOM|OM|MAV|ORN|CYBER|SLP|OGN|ENJ|XEC|QI|DEGO|MBOX|NTRN|TWT|ARK|WRX|UMA|CELR|DENT|XVG|STPT|VGX|GFT|LOKA|CHESS|COMBO|VOXEL|CREAM|VTHO|BLZ|DATA/.USDT)" 
+    pair_whitelist: 
+    - PEPE/USDT
+    - VANRY/USDT
+    - SOL/USDT
+    - FLOKI/USDT
+    - AVAX/USDT
+    - NEAR/USDT
+    - SEI/USDT
+    - BCH/USDT
+    - INJ/USDT
+    - ATOM/USDT
+    - GALA/USDT
+    - RNDR/USDT
+    - AGIX/USDT
+    - AMP/USDT
+    - DYDX/USDT
+    - AI/USDT
+    - ETC/USDT
+    - ENS/USDT
+    - XAI/USDT
+    - ACA/USDT
+    - SAND/USDT
+    - SUSHI/USDT
+    - VET/USDT
+    - BURGER/USDT
+    - KDA/USDT
+    - STRAX/USDT
+    - RDNT/USDT
+    - COMP/USDT
+    - FTT/USDT
+    - TRB/USDT
+    - GLMR/USDT
+    - OCEAN/USDT
+    - LOOM/USDT
+    - OM/USDT
+    - MAV/USDT
+    - ORN/USDT
+    - CYBER/USDT
+    - SLP/USDT
+    - OGN/USDT
+    - ENJ/USDT
+    - XEC/USDT
+    - QI/USDT
+    - DEGO/USDT
+    - MBOX/USDT
+    - NTRN/USDT
+    - TWT/USDT
+    - ARK/USDT
+    - WRX/USDT
+    - UMA/USDT
+    - CELR/USDT
+    - DENT/USDT
+    - XVG/USDT
+    - STPT/USDT
+    - VGX/USDT
+    - GFT/USDT
+    - LOKA/USDT
+    - CHESS/USDT
+    - COMBO/USDT
+    - VOXEL/USDT
+    - CREAM/USDT
+    - VTHO/USDT
+    - BLZ/USDT
+    - DATA/USDT
     pair_blacklist:
       - "(BNB|KCS)/.*"
   pairlists:
